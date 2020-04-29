@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueApp", "LeagueApp\LeagueApp.csproj", "{B0D54C40-54FD-4EA3-A994-D1081DCF03BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{72F86478-B4A5-4BDD-84F0-857F756933B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0D54C40-54FD-4EA3-A994-D1081DCF03BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D54C40-54FD-4EA3-A994-D1081DCF03BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D54C40-54FD-4EA3-A994-D1081DCF03BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D54C40-54FD-4EA3-A994-D1081DCF03BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72F86478-B4A5-4BDD-84F0-857F756933B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72F86478-B4A5-4BDD-84F0-857F756933B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72F86478-B4A5-4BDD-84F0-857F756933B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72F86478-B4A5-4BDD-84F0-857F756933B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10B5B2E5-0094-40A4-A5D5-A14B7069E0F7}
+	EndGlobalSection
+EndGlobal
