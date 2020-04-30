@@ -11,7 +11,7 @@ namespace LeaqueApp
         {
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Teams van File Begin");
-            Parser.InitDb(@"C:\Users\aaron\Downloads\foot.csv");
+            //Parser.InitDb(@"C:\Users\aaron\Downloads\foot.csv");
             Console.WriteLine("Teams van File Einde");
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Toevoegen Begin");
@@ -19,11 +19,11 @@ namespace LeaqueApp
             Console.WriteLine("Toevoegen Einde");
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Update Begin");
-
+            //UpdateTest();
             Console.WriteLine("Update Einde");
             Console.WriteLine("--------------------------------------------------------------------------------------------");
             Console.WriteLine("Select Begin");
-            //SelectTest();
+            SelectTest();
             Console.WriteLine("Select Einde");
             Console.WriteLine("--------------------------------------------------------------------------------------------");
         }
@@ -40,13 +40,13 @@ namespace LeaqueApp
             team1.Spelers.Add(speler2);
             team1.Spelers.Add(speler3);
             team2.Spelers.Add(speler4);
-            Transfer t1 = new Transfer(speler4, 600000, team2, team1);
-            Transfer t2 = new Transfer(speler2, 900000, team2, team1);
             LeagueBeheer lb = new LeagueBeheer();
             lb.VoegSpelerToe(speler1);
             lb.VoegSpelerToe(speler2);
             lb.VoegSpelerToe(speler3);
             lb.VoegSpelerToe(speler4);
+            Transfer t1 = new Transfer(speler4, 600000, team2, team1);
+            Transfer t2 = new Transfer(speler2, 900000, team2, team1);
             lb.VoegTeamToe(team1);
             lb.VoegTeamToe(team2);
             lb.VoegTransferToe(t1);
@@ -101,7 +101,7 @@ namespace LeaqueApp
             {
                 Console.WriteLine("Team met id 900000 is niet gevonden");
             }
-            Team tea3 = lb.SelecteerTeam(900000);
+            Team tea3 = lb.SelecteerTeam(66666);
             if (tea3 != null)
             {
                 Console.WriteLine("Team met id 600000 is gevonden");
@@ -134,13 +134,16 @@ namespace LeaqueApp
         {
             LeagueBeheer lb = new LeagueBeheer();
             Team team1 = new Team(66666, "The OG Team", "Ogs", "That Guy's Other Borther");
+            team1.Spelers.Add(new Speler("Jeff Bobo", 19, 660000));
+            team1.Spelers.Add(new Speler("Rando Nai", 22, 1000000));
+            team1.Spelers.Add(new Speler("Test McTestFace", 99, 10));
             Team team2 = new Team(55, "Not Exist", "Fake", "Some Guy");
             lb.UpdateTeam(team1);
             lb.UpdateTeam(team2);
             Speler speler1 = new Speler("Rando Naim", 23, 1000);
             Speler speler2 = new Speler("Aja Ches", 10, 5500000);
-            lb.UpdateSpeler(speler2, 2);
-            lb.UpdateSpeler(speler1, 5);
+            lb.UpdateSpeler(speler2, 11);
+            lb.UpdateSpeler(speler1, 25);
         }
     }
 }

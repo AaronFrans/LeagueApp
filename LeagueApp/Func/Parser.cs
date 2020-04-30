@@ -18,16 +18,14 @@ namespace LeaqueApp.Func
             {
                 string line;            string spelerNaam;
                 int spelerNummer;       string teamNaam;
-                int spelerWaarde;    int teamStamnr;
+                int spelerWaarde;       int teamStamnr;
                 string teamTrainer;     string teamBijnaam;
                 r.ReadLine();
                 while ((line = r.ReadLine()) != null)
                 {
                     string[] ss = line.Split(',');
                     spelerNaam = ss[0];
-                    Console.WriteLine(ss[1]);
                     spelerNummer = int.Parse(ss[1]);
-                    Console.WriteLine(ss[3]);
                     ss[3] = ss[3].Replace(" ", "");
                     spelerWaarde = int.Parse(ss[3]);
                     teamNaam = ss[2];
