@@ -143,7 +143,7 @@ namespace DataLayer
         {
             if (ctx.Transfers.Any(s => s.TransferId == id))
             {
-                return ctx.Transfers.Where(s => s.TransferId == id).First();
+                return ctx.Transfers.Where(s => s.TransferId == id).Include(t=>t.TransferredSpeler).Include(t=>t.OudTeam).Include(t=> t.NieuwTeam).First();
             }
             else
             {
